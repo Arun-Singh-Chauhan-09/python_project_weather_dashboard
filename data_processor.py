@@ -1,3 +1,5 @@
+#cleans up raw JSON from the API into usable dictionaries
+
 from datetime import datetime
 from collections import defaultdict
 
