@@ -18,6 +18,7 @@ class WeatherGUI:
         self.root.title("Advanced Weather Dashboard")
         self.root.geometry("1200x700")
         self.root.minsize(900, 600)
+	
 
         self.api          = WeatherAPI(api_key)
         self.city_manager = CityManager()

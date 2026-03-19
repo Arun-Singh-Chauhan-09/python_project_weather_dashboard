@@ -95,7 +95,7 @@ weather_dashboard/
 - The `.env` file is listed in `.gitignore` so your API key wont accidentally
   get pushed to GitHub
 - Weather icons are loaded from OpenWeatherMap's CDN - they might take
-  a second on slow connections, thats normal
+      a second on slow connections, that's normal.
 - Tested on Windows with Python 3.14
 
 ## Things I want to add eventually
