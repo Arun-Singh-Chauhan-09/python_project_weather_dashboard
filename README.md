@@ -46,8 +46,17 @@ python -m pip install -r requirements.txt
 
 Run this command in the project folder to create the `.env` file automatically:
 
+**Windows (PowerShell)**
 ```
-echo OPENWEATHER_API_KEY=a696f9459525284760d0cd74e3fb4fca > .env
+python -c "open('.env', 'w', encoding='utf-8').write('OPENWEATHER_API_KEY=a696f9459525284760d0cd74e3fb4fca\n')"
+```
+
+> Don't use `echo ... > .env` in PowerShell — it creates the file with the wrong
+> encoding and the app won't be able to read the key.
+
+**macOS / Ubuntu**
+```
+echo "OPENWEATHER_API_KEY=a696f9459525284760d0cd74e3fb4fca" > .env
 ```
 
 That's it — no need to create or edit the file manually. If the key ever
