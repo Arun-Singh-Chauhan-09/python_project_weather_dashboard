@@ -1,0 +1,19 @@
+# API key - never commit this
+.env
+
+# python cache folders
+__pycache__/
+*.pyc
+*.pyo
+
+# virtual environments
+venv/
+.venv/
+env/
+
+# editor folders
+.idea/
+.vscode/
+
+# mac junk
+.DS_Store
