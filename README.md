@@ -23,24 +23,57 @@ plus a 5-day forecast chart.
 
 ## Setup
 
-1. Get a free API key from https://openweathermap.org/api
+### 1. Clone the repo
 
-2. Clone or download the project
+```
+git clone https://github.com/Arun-Singh-Chauhan-09/python_project_weather_dashboard.git
+cd python_project_weather_dashboard
+```
 
-3. Open the `.env` file and replace the placeholder with your key:
-   ```
-   OPENWEATHER_API_KEY=paste_your_key_here
-   ```
+### 2. Install dependencies
 
-4. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+```
+pip install -r requirements.txt
+```
 
-5. Run it:
-   ```
-   python main.py
-   ```
+If you are on Python 3.14 and see any errors, try:
+
+```
+python -m pip install -r requirements.txt
+```
+
+### 3. Set up the API key
+
+The app loads the API key from a `.env` file at runtime so it never ends up in the
+source code. Open (or create) the `.env` file in the project root and add this line:
+
+```
+OPENWEATHER_API_KEY=a696f9459525284760d0cd74e3fb4fca
+```
+
+This is the key used during development (free tier of OpenWeatherMap).
+If it stops working, get a free replacement at https://openweathermap.org/api —
+registration takes about a minute.
+
+The `.gitignore` file already excludes `.env` so your key won't accidentally get
+pushed to GitHub.
+
+### 4. Run the app
+
+```
+python main.py
+```
+
+The window will open. Type any city name and press Enter or click Search.
+
+### Troubleshooting
+
+| Problem | Fix |
+|---|---|
+| "API key missing" popup | Check `.env` has the key on its own line with no extra spaces |
+| "City not found" error | Check spelling — use English names (e.g. `Munich` not `Munchen`) |
+| "No internet connection" | Check your network and try again |
+| Chart is blank on startup | Search for a city first — chart only shows after a successful search |
 
 ## Project structure
 
