@@ -1,3 +1,6 @@
+
+# handles all communication with the OpenWeatherMap API
+
 import requests
 
 class WeatherAPI:
