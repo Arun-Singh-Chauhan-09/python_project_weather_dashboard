@@ -44,16 +44,15 @@ python -m pip install -r requirements.txt
 
 ### 3. Set up the API key
 
-The app loads the API key from a `.env` file at runtime so it never ends up in the
-source code. Open (or create) the `.env` file in the project root and add this line:
+Run this command in the project folder to create the `.env` file automatically:
 
 ```
-OPENWEATHER_API_KEY=a696f9459525284760d0cd74e3fb4fca
+echo OPENWEATHER_API_KEY=a696f9459525284760d0cd74e3fb4fca > .env
 ```
 
-This is the key used during development (free tier of OpenWeatherMap).
-If it stops working, get a free replacement at https://openweathermap.org/api —
-registration takes about a minute.
+That's it — no need to create or edit the file manually. If the key ever
+stops working, get a free replacement at https://openweathermap.org/api
+(registration takes about a minute).
 
 The `.gitignore` file already excludes `.env` so your key won't accidentally get
 pushed to GitHub.
