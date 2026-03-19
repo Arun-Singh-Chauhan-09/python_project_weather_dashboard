@@ -1,3 +1,4 @@
+# saves and loads the favourite cities list from a local JSON file
 import json
 import os
 
