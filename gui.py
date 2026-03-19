@@ -235,8 +235,11 @@ class WeatherGUI:
 
     def _refresh_favourites(self):
         self.fav_listbox.delete(0, tk.END)
-        for city in self.city_manager.cities:
-            self.fav_listbox.insert(tk.END, city)
+        if not self.city_manager.cities:
+            self.fav_listbox.insert(tk.END, "No favourites yet")
+        else:
+            for city in self.city_manager.cities:
+                self.fav_listbox.insert(tk.END, city)
 
     def _on_favourite_click(self, event):
         sel = self.fav_listbox.curselection()
@@ -245,3 +248,4 @@ class WeatherGUI:
             self.city_entry.delete(0, tk.END)
             self.city_entry.insert(0, city)
             self.search()
+
